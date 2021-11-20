@@ -14,7 +14,7 @@ const insert = node => value => {
     return { 
       left: undefined, 
       value,
-      right,
+      right: undefined,
     }
   }
   const nodeValue = node.value
