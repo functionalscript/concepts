@@ -6,9 +6,10 @@
  * }} TNode
  */
 
-/** @type {(node: TNode) => (vale: string) => TNode} */
-const insert = node => value => {
-  if (node.value === value) { return node }
+/** @type {(node: TNode) => (newValue: string) => TNode} */
+const insert = ({left, value, right }) => newvalue => {
+  if (value === newValue) { return node }
+  // ...
 }
 
 module.exports = 'Hello world!'
