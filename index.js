@@ -20,20 +20,12 @@ const insert = old => value => {
   if (value < old.value) { 
     const left = insert(old.left)(value)
     if (left === old.left) { return old }
-    return { 
-      left,
-      value: old.value, 
-      right: old.right,
-    }
+    return { ...old, left }
   }
   if (old.value < value) {
     const right = insert(old.right)(value)
     if (right === old.right) { return old }
-    return { 
-      left: old.left,
-      value: old.value, 
-      right,
-    }
+    return { ...old, right }
   }
   return old
 }
