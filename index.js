@@ -8,8 +8,8 @@ const { todo } = require('functionalscript/lib')
  * }} TNode
  */
 
-/** @type {(node: TNode|undefined) => (value: string) => TNode} */
-const insert = node => value => {
+/** @type {(old: TNode|undefined) => (value: string) => TNode} */
+const insert = old => value => {
   if (node === undefined) { 
     return { 
       left: undefined, 
@@ -17,19 +17,25 @@ const insert = node => value => {
       right: undefined,
     }
   }
-  const oldValue = node.value
-  if (value === oldValue) { return node }
-  if (value < oldValue) { 
-    const oldLeft = node.left
-    const left = insert(oldLeft)(value)
-    if (left === oldLeft) { return node }
+  if (value < old.value) { 
+    const left = insert(old.left)(value)
+    if (left === old.left) { return node }
     return { 
-      left, 
+      left,
       value, 
-      right: node.right,
+      right: old.right,
     }
   }
-  return todo()
+  if (old.value < value) {
+    const right = insert(old.right)(value)
+    if (right === old.right) { return node }
+    return { 
+      left: old.left,
+      value, 
+      right,
+    }
+  }
+  return node
 }
 
 module.exports = {
