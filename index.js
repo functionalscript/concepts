@@ -22,7 +22,7 @@ const insert = old => value => {
     if (left === old.left) { return old }
     return { 
       left,
-      value, 
+      value: old.value, 
       right: old.right,
     }
   }
@@ -31,7 +31,7 @@ const insert = old => value => {
     if (right === old.right) { return old }
     return { 
       left: old.left,
-      value, 
+      value: old.value, 
       right,
     }
   }
