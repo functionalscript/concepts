@@ -16,4 +16,7 @@ const insert = node => newValue => {
   return todo()
 }
 
-module.exports = 'Hello world!'
+module.exports = {
+  /** @readonly */
+  insert,
+}
