@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc & node --trace-uncaught ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/functionalscript/template.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/functionalscript/template/issues"
+  },
+  "homepage": "https://github.com/functionalscript/template#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}
