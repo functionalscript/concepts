@@ -35,7 +35,7 @@ const insert = old => value => {
       right,
     }
   }
-  return node
+  return old
 }
 
 module.exports = {
