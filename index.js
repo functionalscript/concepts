@@ -17,10 +17,17 @@ const insert = node => value => {
       right: undefined,
     }
   }
-  const nodeValue = node.value
-  if (value === nodeValue) { return node }
-  if (value < nodeValue) { 
-    return todo()
+  const oldValue = node.value
+  if (value === oldValue) { return node }
+  if (value < oldValue) { 
+    const oldLeft = node.left
+    const left = insert(oldLeft)(value)
+    if (left === oldLeft) { return node }
+    return { 
+      left, 
+      value, 
+      right: node.right,
+    }
   }
   return todo()
 }
