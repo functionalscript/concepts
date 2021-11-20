@@ -7,6 +7,8 @@
  */
 
 /** @type {(node: TNode) => (vale: string) => TNode} */
-const insert = node => value => { ... }
+const insert = node => value => {
+  if (node.value === value) { return node }
+}
 
 module.exports = 'Hello world!'
