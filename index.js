@@ -2,9 +2,9 @@ const { todo } = require('functionalscript/lib')
 
 /**
  * @typedef {{
- *  left: TNode
+ *  left: TNode|undefined
  *  value: string
- *  right: TNode
+ *  right: TNode|undefined
  * }} TNode
  */
 
