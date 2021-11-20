@@ -19,7 +19,7 @@ const insert = old => value => {
   }
   if (value < old.value) { 
     const left = insert(old.left)(value)
-    if (left === old.left) { return node }
+    if (left === old.left) { return old }
     return { 
       left,
       value, 
@@ -28,7 +28,7 @@ const insert = old => value => {
   }
   if (old.value < value) {
     const right = insert(old.right)(value)
-    if (right === old.right) { return node }
+    if (right === old.right) { return old }
     return { 
       left: old.left,
       value, 
