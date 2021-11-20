@@ -1,8 +1,9 @@
 const i = require('.')
 
 let root = undefined
-root = i.insert(root)('hello world!')
-root = i.insert(root)('a')
-root = i.insert(root)('b')
+
+for (let k = 0; k < 100; k++) {
+  root = i.insert(root)((k * k).toString())
+}
 
 console.log(root)
