@@ -1,4 +1,4 @@
-const lib = require('functionalscript/lib')
+const { todo } = require('functionalscript/lib')
 
 /**
  * @typedef {{
@@ -9,9 +9,11 @@ const lib = require('functionalscript/lib')
  */
 
 /** @type {(node: TNode) => (newValue: string) => TNode} */
-const insert = ({left, value, right }) => newValue => {
-  if (value === newValue) { return node }
-  return lib.todo()
+const insert = node => newValue => {
+  const { value } = node
+  if (newValue === value) { return node }
+  if (newValue < value) { return todo() }
+  return todo()
 }
 
 module.exports = 'Hello world!'
