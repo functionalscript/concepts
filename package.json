@@ -18,5 +18,8 @@
   "homepage": "https://github.com/functionalscript/template#readme",
   "devDependencies": {
     "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "functionalscript": "github:functionalscript/functionalscript"
   }
 }
