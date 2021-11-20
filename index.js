@@ -10,7 +10,7 @@ const { todo } = require('functionalscript/lib')
 
 /** @type {(old: TNode|undefined) => (value: string) => TNode} */
 const insert = old => value => {
-  if (node === undefined) { 
+  if (old === undefined) { 
     return { 
       left: undefined, 
       value,
