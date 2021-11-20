@@ -1,3 +1,3 @@
 const i = require('.')
 
-i.insert({ undefined, 'a', undefined })
+i.insert(undefined)('hello world!')
