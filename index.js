@@ -1,9 +1,8 @@
 /**
- * @template T
  * @typedef {{
- *  left: TNode<T>
- *  value: T
- *  right: TNode<T>
+ *  left: TNode
+ *  value: string
+ *  right: TNode
  * }} TNode
  */
 
