@@ -19,7 +19,9 @@ const insert = node => value => {
   }
   const nodeValue = node.value
   if (value === nodeValue) { return node }
-  if (value < nodeValue) { return todo() }
+  if (value < nodeValue) { 
+    return todo()
+  }
   return todo()
 }
 
