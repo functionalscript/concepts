@@ -1,3 +1,3 @@
 const i = require('.')
 
-if (i !== 'Hello world!') { throw 'no hello' }
+i.insert({ undefined, 'a', undefined })
