@@ -1,3 +1,5 @@
 const i = require('.')
 
-i.insert(undefined)('hello world!')
+const root = i.insert(undefined)('hello world!')
+
+console.log(root)
