@@ -19,3 +19,12 @@ add(2)(3) // 5
 
 // Translation
 
+function static_add_f(self, b) {
+}
+
+function add(a) {
+  return { self: a, func: static_add_f }
+}
+
+const f = add(2)
+f.func(f.self, 2)
