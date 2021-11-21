@@ -24,7 +24,7 @@ function static_add_f(self, b) {
 }
 
 function add(a) {
-  return { self: a, func: static_add_f }
+  return { self: { a }, func: static_add_f }
 }
 
 const f = add(2)
