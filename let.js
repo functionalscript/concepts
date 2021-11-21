@@ -18,5 +18,7 @@ const add4 = a => {
   return b => y + b // ok
 }
 
-add3(2)(2) // 7
-add4(2)(2) // 4
+module.exports = {
+  add3,
+  add4,
+}
