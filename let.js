@@ -22,7 +22,17 @@ const add4 = a => {
   return b => y + b // ok
 }
 
+/** @type {() => readonly[() => number, () => number]} */
+const twoFunctions = () => {
+  let x = 0
+  return [
+    () => { x = x + 1; return x }
+    () => { x = x - 1; return x }
+  ]
+}
+
 module.exports = {
   add3,
   add4,
+  twoFunctions,
 }
