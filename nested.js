@@ -20,6 +20,7 @@ add(2)(3) // 5
 // Translation
 
 function static_add_f(self, b) {
+  return self.a + b
 }
 
 function add(a) {
