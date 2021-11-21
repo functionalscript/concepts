@@ -14,7 +14,7 @@ function add(a) {
   const y = x
   x = 5
   function f(b) {
-    return a + b
+    return y + b
   }
 }
 
@@ -23,11 +23,14 @@ add(2)(3) // 5
 // Translation
 
 function static_add_f(self, b) {
-  return self.a + b
+  return self.y + b
 }
 
 function static_add(a) {
-  return { self: { a }, func: static_add_f }
+  let x = a
+  const y = x
+  x = 5
+  return { self: { a, y }, func: static_add_f }
 }
 
 const f = static_add(2)
