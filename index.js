@@ -1,4 +1,4 @@
-const { todo } = require('functionalscript/lib')
+const { todo } = require('functionalscript/dev')
 
 /**
  * @typedef {{
