@@ -23,9 +23,9 @@ function static_add_f(self, b) {
   return self.a + b
 }
 
-function add(a) {
+function static_add(a) {
   return { self: { a }, func: static_add_f }
 }
 
-const f = add(2)
+const f = static_add(2)
 f.func(f.self, 2)
