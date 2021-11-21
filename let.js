@@ -18,5 +18,5 @@ const add4 = a => {
   return b => y + b // ok
 }
 
-add3(2)(2)
-add4(2)(2)
+add3(2)(2) // 7
+add4(2)(2) // 4
