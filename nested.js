@@ -10,6 +10,9 @@ static_func(2, 3) // 5
 // Language with nested functions
 
 function add(a) {
+  let x = a
+  const y = x
+  x = 5
   function f(b) {
     return a + b
   }
