@@ -26,8 +26,8 @@ const add4 = a => {
 const twoFunctions = () => {
   let x = 0
   return [
-    () => { x = x + 1; return x }
-    () => { x = x - 1; return x }
+    () => { x = x + 1; return x },
+    () => { x = x - 1; return x },
   ]
 }
 
