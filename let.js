@@ -10,7 +10,7 @@ const add3 = a => {
   return b => x + b // ERROR!
 }
 
-const add3 = a => {
+const add4 = a => {
   let x = a
   const y = x
   return b => y + b // ok
