@@ -14,4 +14,8 @@ console.log(`add4: ${add4(2)(2)}`)
 
 const tf = twoFunctions()
 
-constole.log(`twoFunctions: `, tf[0](), tf[1]())
+console.log(`twoFunctions: `, tf[0](), tf[1]())
+console.log(`twoFunctions: `, tf[0](), tf[1]())
+console.log(`twoFunctions: `, tf[0](), tf[1]())
+console.log(`twoFunctions: `, tf[0](), tf[1]())
+console.log(`twoFunctions: `, tf[0](), tf[1]())
