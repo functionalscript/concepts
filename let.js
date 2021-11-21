@@ -7,11 +7,16 @@ const add2 = a => {
 
 const add3 = a => {
   let x = a
+  x = 5
   return b => x + b // ERROR!
 }
 
 const add4 = a => {
   let x = a
   const y = x
+  x = 5
   return b => y + b // ok
 }
+
+add3(2)(2)
+add4(2)(2)
